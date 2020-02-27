@@ -1,0 +1,458 @@
+/* FONT IMPORTS */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+.icon {
+  font-family: 'Material Icons', serif;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+
+/* VARIABLES */
+
+:root {
+  --main-color: #1a8fff;
+  --text-color: #777;
+  --text-color-light: #ccc;
+  --border-color: #eee;
+  --bg-color: #f9f9f9;
+  --neutral-color: #fff;
+}
+
+
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--text-color);
+  background: lightcyan;
+  position: relative;
+}
+
+header {
+  display: block;
+  width: 100%;
+  padding: 1.75em 0;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--neutral-color);
+}
+
+header #logo {
+  font-size: 175%;
+  text-align: center;
+  color: var(--main-color);
+  line-height: 1;
+}
+
+header #logo .icon {
+  padding-right: .25em;
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5em;
+  max-width: 50em;
+}
+
+
+/* GRID */
+
+.rowStyle {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.row-middle {
+  align-items: center;
+}
+
+.colStyle {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.col-start {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.col-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.col-end {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+
+/* Calendar */
+
+.calendar {
+  display: block;
+  position: relative;
+  width: 100%;
+  background: var(--neutral-color);
+  border: 1px solid var(--border-color);
+}
+
+.calendar .header {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 95%;
+  padding: .5em 0;
+  border-bottom: 1px solid var(--border-color);
+  background-color: lightgrey;
+}
+
+.calendar .header .icon {
+  cursor: pointer;
+  transition: .15s ease-out;
+}
+
+.calendar .header .icon:hover {
+  transform: scale(1.75);
+  transition: .25s ease-out;
+  color: var(--main-color);
+}
+
+.calendar .header .icon:first-of-type {
+  margin-left: 1em;
+}
+
+.calendar .header .icon:last-of-type {
+  margin-right: 1em;
+}
+
+.calendar .days {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--text-color-light);
+  font-size: 70%;
+  padding: .75em 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.calendar .body .cell {
+  position: relative;
+  height: 5em;
+  border-right: 1px solid var(--border-color);
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--neutral-color);
+  transition: 0.25s ease-out;
+}
+
+.calendar .body .cell:hover {
+  background: var(--bg-color);
+  transition: 0.5s ease-out;
+}
+
+.calendar .body .selected {
+  border-left: 10px solid transparent;
+  border-image: linear-gradient(45deg, #7ccfce 0%,#10f2d0 40%);
+  border-image-slice: 1;
+}
+
+.calendar .body .row {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.calendar .body .row:last-child {
+  border-bottom: none;
+}
+
+.calendar .body .cell:last-child {
+  border-right: none;
+}
+
+.calendar .body .cell .number {
+  position: absolute;
+  font-size: 82.5%;
+  line-height: 1;
+  top: .75em;
+  right: .75em;
+  font-weight: 700;
+}
+
+.calendar .body .disabled {
+  color: var(--text-color-light);
+  pointer-events: none;
+}
+
+.calendar .body .cell .bg {
+  font-weight: 700;
+  line-height: 1;
+  color: var(--main-color);
+  opacity: 0;
+  font-size: 8em;
+  position: absolute;
+  top: -.2em;
+  right: -.05em;
+  transition: .25s ease-out;
+  letter-spacing: -.07em;
+}
+
+.calendar .body .cell:hover .bg, .calendar .body .selected .bg  {
+  opacity: 0.05;
+  transition: .5s ease-in;
+}
+
+.calendar .body .colStyle {
+  flex-grow: 0;
+  flex-basis: calc(100%/7);
+  width: calc(100%/7);
+}
+
+.calendarInfo {
+  position: absolute;
+  left: .35rem;
+  color: blue;
+  font-size: .6rem;
+}
+
+.calNumberZindex {
+  z-index: -1;
+}
+.position0 {
+  top: 1.3rem;
+}
+
+.position1 {
+  top: 3.0rem;
+}
+
+/* .position2 {
+  top: 3.7rem;
+} */
+
+.Al-Anon {
+  color: red;
+}
+.NA {
+  color: purple;
+}
+.OA {
+  color: green;
+}
+/* END OF CALENDER CSS */
+
+.buttonStyle,
+.navButton,
+button {
+    cursor: pointer;
+}
+.landingPage {
+    overflow: hidden;
+}
+.landingForm {
+    margin-top: 25%;
+}
+.sortButton{
+  white-space: nowrap;
+  height: 1.75rem;
+  width: 5.5rem;
+  padding: 0.25rem;
+  font-size: small;
+}
+
+/*Details-Page*/
+.carouselCard {
+    margin-top: 5%;
+}
+.headerCard {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    height: auto;
+}
+.detailsHeader > p {
+  font-size: 25px;
+}
+.contactInfoCard {
+    margin-bottom: 2%;
+}
+.contactInfo > h1 {
+    font-size: 25px;
+}
+.contactInfo > p {
+  font-size: 18px;
+}
+.yelpStars {
+  left: 9rem;
+  bottom: 2.7rem;
+}
+.googleStars {
+  left: 9rem;
+  bottom: 2.7rem;
+}
+.yelpRatingsFont {
+  font-size:18px;
+}
+.googleRatingsFont {
+  font-size:18px;
+}
+.googleReviewTitle {
+  font-size: 25px;
+}
+.googleReviewText {
+  font-style: italic;
+  font-size: 18px;
+}
+.yelpReviewTitle {
+  font-size: 25px;
+}
+.yelpReviewText {
+  font-style: italic;
+  font-size: 18px;
+}
+.starContainer {
+  margin-bottom: -50px;
+}
+/*End of Details-Page CSS*/
+
+.favoritesCardBody{
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    margin: 0.5rem auto;
+}
+
+.favoritesDeleteButtonRightPos{
+  position: absolute;
+  right: 1rem;
+}
+
+.favoritedImg2,
+.favoritedImg{
+  background-image: url("./images/favoritedIcon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  margin: 0;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.favoriteDayStyle {
+  font-size: 13px
+}
+
+.addressStyle {
+  text-transform: capitalize;
+}
+
+.favoritedImg {
+  height: 100px;
+  width: 100px;
+}
+
+.favoritedImg2 {
+  height: 50px;
+  width: 50px;
+}
+
+.flexCentering{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.cardTitle {
+    font-size: 16px;
+}
+
+.loaderContainer{
+    margin-top: 20%;
+}
+.loaderText{
+    margin-top: 10%;
+}
+.loader{
+    display: block;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #0071BE;
+    border-bottom: 16px solid #37B649;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.cardContents {
+    border-radius: 1rem;
+    border: 1px solid #B6EAFF;
+    margin: 1rem;
+    transform: scale(1.05, 1.05);
+    box-shadow: 2px 2px rgba(108, 118, 255, 0.322), 
+    5px 5px rgba(39, 72, 102, 0.22);
+    cursor: pointer;
+    transition: 0.4s;
+}
+.resultsBody {
+    background-color: #DCF5FF;
+    height: 100%;
+}
+.cardTitle {
+    font-weight: bold;
+}
+.card-subtitle, .card-text {
+    /* color: #B3B3B3; */
+    font-size: .8rem;
+}
+.cardTitle:hover, .card-subtitle:hover {
+    text-decoration: underline;
+}
+.carousel-item > img { 
+    width: 100%; 
+}
+.ratingsFont {
+  font-size:14px;
+}
