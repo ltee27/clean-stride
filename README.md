@@ -1,5 +1,5 @@
 # Clean Stride
-Clean Stride is an addiction recovery center facilitator application. It is built on the LAMP stack in conjunction with React.js, and React Strap.
+Clean Stride is a recovery center facilitator application. It is built on the LAMP stack in conjunction with React.js, and React Strap.
 
 # Installation
 Node and Apache must be installed on local server for the application to properly run.
