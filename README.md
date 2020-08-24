@@ -2,13 +2,13 @@
 Clean Stride is a recovery center facilitator application
 
 #Technologies Used
-React.js
-Webpack 4
-Reactstrap
-PHP
-HTML5
-CSS3
-AWS EC2
+- React.js
+- Webpack 4
+- Reactstrap
+- PHP
+- HTML5
+- CSS3
+- AWS EC2
 
 # Installation
 Node and Apache must be installed on local server for the application to properly run.
