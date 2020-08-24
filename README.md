@@ -1,5 +1,5 @@
 # Clean Stride
-Clean Stride is a recovery center facilitator application
+Clean Stride is a recovery center facilitator application.
 
 #Technologies Used
 - React.js
