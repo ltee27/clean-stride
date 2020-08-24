@@ -37,7 +37,7 @@ git clone https://github.com/ltee27/clean-stride
 cd clean-stride
 ```
 
-2. Intall all dependencies with NPM.
+2. Install all dependencies with NPM.
 
 ```shell
 npm install
