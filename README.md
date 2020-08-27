@@ -44,4 +44,4 @@ npm run dev
 
 ## Preview
 
-![](public/images/CleanStrideDemo.gif)
+![](images/CleanStrideDemo.gif)
