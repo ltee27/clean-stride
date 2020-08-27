@@ -44,4 +44,4 @@ npm run dev
 
 ## Preview
 
-![Clean Stride](./images/CleanStrideDemo.gif)
+![Clean Stride](./server/public/images/CleanStrideDemo.gif)
