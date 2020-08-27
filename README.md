@@ -15,12 +15,6 @@ A full stack recovery center facilitator application.
 
 Try the application live at https://dev.cleanstride.net/
 
-## Features
--
--
--
--
-
 ## Preview
 
 ## Development
