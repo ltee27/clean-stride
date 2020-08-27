@@ -13,7 +13,7 @@ A full stack recovery center facilitator application.
 
 ## Live Demo
 
-Try the application live at dev.cleanstride.net
+Try the application live at https://dev.cleanstride.net/
 
 ## Features
 -
