@@ -44,3 +44,4 @@ npm run dev
 
 ## Preview
 
+![](CleanStrideDemo.gif)
