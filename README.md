@@ -15,6 +15,10 @@ A full stack recovery center facilitator application.
 
 Try the application live at https://dev.cleanstride.net/
 
+## Preview
+
+![Clean Stride](./server/public/images/CleanStrideDemo.gif)
+
 ## Development
 
 ### System Requirements
@@ -40,8 +44,3 @@ npm install
 ```shell
 npm run dev
 ```
-
-
-## Preview
-
-![Clean Stride](./server/public/images/CleanStrideDemo.gif)
